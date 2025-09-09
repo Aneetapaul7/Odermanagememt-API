@@ -9,7 +9,7 @@ class User(AbstractUser):
     )
     role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='customer')
 
-    # Custom related_name to resolve conflicts
+    
     groups = models.ManyToManyField(
         'auth.Group',
         verbose_name='groups',
